@@ -1,0 +1,36 @@
+Springshot
+=============
+
+Add a little WebOS to Multitasking!
+
+How do I Springshot?
+=============
+
+You can find Springshot in Cydia under the BigBoss repo :D
+
+Open multitasking on iOS 7, pull an app downwards, let go... FWOOM!!
+
+How do I compile?
+=============
+
+Uses theos, so edit the Makefile and `make package install` ALL the things!
+
+Price?
+=============
+
+Totally free! If you'd like to support my continuation of this project (and others!), feel free to [donate](http://www.adambell.ca/donate/)! It'd be much appreciated :D
+
+License?
+=============
+
+Pretty much the BSD license, just don't repackage it and call it your own please!
+
+Also if you do make some changes, feel free to make a pull request and help make things more awesome!
+
+Contact Info?
+=============
+
+Feel free to follow me on twitter: [@b3ll](https://www.twitter.com/b3ll)!
+
+Special Thanks
+=============
