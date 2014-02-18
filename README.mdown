@@ -7,7 +7,7 @@ You can find Springshot in Cydia under the BigBoss repo :D
 
 Open app switching on iOS 7, pull an app downwards, let go... weeeeeeee!!
 
-![weeeee.gif](https://raw2.github.com/b3ll/Springshot/master/README/weeeeeeee.gif)
+![weeeee.gif](https://raw2.github.com/b3ll/Springshot/master/README/weeeeeeee.gif?token=1981722__eyJzY29wZSI6IlJhd0Jsb2I6YjNsbC9TcHJpbmdzaG90L21hc3Rlci9SRUFETUUvd2VlZWVlZWVlLmdpZiIsImV4cGlyZXMiOjEzOTMzNTkyNjV9--fb76134330b034b4a74e7f834383d1e88f73f938)
 
 ### How do I compile?
 Uses theos, so edit the Makefile and `make package install` ALL the things!
