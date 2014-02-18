@@ -1,15 +1,7 @@
+%config(generator=MobileSubstrate);
+
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
-#define THEOS
-
-#ifdef THEOS
-	#define HOOK(classname) %hook classname
-	#define END %end
-#else
-	#define HOOK(classname) @implementation classname (theos)
-	#define END @end
-#endif
 
 @interface SBAppSliderController : NSObject
 - (void)sliderScroller:(id)arg1 itemWantsToBeRemoved:(unsigned int)arg2;
@@ -27,6 +19,22 @@
 - (SBAppSwitcherPageView *)item;
 @end
 
+BOOL _springshotEnabled = NO;
+
+%hook SBAppSliderController
+
+- (void)switcherWillBeDismissed:(BOOL)arg1 {
+    _springshotEnabled = NO;
+    %orig;
+}
+
+- (void)switcherWasPresented:(BOOL)arg1 {
+    _springshotEnabled = YES;
+    %orig;
+}
+
+%end
+
 %hook SBAppSliderScrollingViewController
 
 static NSMutableArray *itemsToRemove;
@@ -34,16 +42,18 @@ static NSMutableArray *itemsToRemove;
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(CGPoint *)targetContentOffset {
     %orig;
 
-    NSUInteger itemIndex = [[self valueForKey:@"_items"] indexOfObject:scrollView];
-    BOOL isRemovable = [self.delegate sliderScroller:scrollView isIndexRemovable:itemIndex];
+    if (_springshotEnabled) {
+        NSUInteger itemIndex = [[self valueForKey:@"_items"] indexOfObject:scrollView];
+        BOOL isRemovable = [self.delegate sliderScroller:scrollView isIndexRemovable:itemIndex];
 
-    if (scrollView.contentOffset.y < -40.0 && isRemovable) {
-        [itemsToRemove addObject:scrollView];
+        if (scrollView.contentOffset.y < -40.0 && isRemovable) {
+            [itemsToRemove addObject:scrollView];
+        }
     }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    if ([itemsToRemove containsObject:scrollView]) {
+    if ([itemsToRemove containsObject:scrollView] && _springshotEnabled) {
         __weak SBAppSliderController *scrollerDelegate = self.delegate;
         __weak SBAppSliderScrollingViewController *weakSelf = self;
         __weak UIScrollView *weakScrollView = scrollView;
