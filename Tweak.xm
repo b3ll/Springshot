@@ -1,23 +1,6 @@
 %config(generator=MobileSubstrate);
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
-@interface SBAppSliderController : NSObject
-- (void)sliderScroller:(id)arg1 itemWantsToBeRemoved:(unsigned int)arg2;
-- (BOOL)sliderScroller:(id)arg1 isIndexRemovable:(unsigned int)arg2;
-@end
-
-@interface SBAppSliderScrollingViewController : NSObject
-- (SBAppSliderController *)delegate;
-@end
-
-@interface SBAppSwitcherPageView : NSObject
-@end
-
-@interface SBAppSliderItemScrollView : NSObject
-- (SBAppSwitcherPageView *)item;
-@end
+#import "springshot.h"
 
 BOOL _springshotEnabled = NO;
 
@@ -71,7 +54,7 @@ static NSMutableArray *itemsToRemove;
                 [scrollerDelegate sliderScroller:weakSelf itemWantsToBeRemoved:itemIndex];
             }];
 
-        NSLog(@"SpringBoard: WEEEEEEEEEEEEEEEEEEEEEEE!!!!!!");
+        DebugLog(@"SpringBoard: WEEEEEEEEEEEEEEEEEEEEEEE!!!!!!");
     }
     else {
         %orig;
