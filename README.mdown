@@ -5,7 +5,9 @@ Add a little WebOS to iOS!
 ### How do I Springshot?
 You can find Springshot in Cydia under the BigBoss repo :D
 
-Open app switching on iOS 7, pull an app downwards, let go... FWOOSH!!
+Open app switching on iOS 7, pull an app downwards, let go... weeeeeeee!!
+
+![weeeee.gif](https://raw2.github.com/b3ll/Springshot/master/README/weeeeeeee.gif)
 
 ### How do I compile?
 Uses theos, so edit the Makefile and `make package install` ALL the things!
