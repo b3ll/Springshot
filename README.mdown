@@ -1,11 +1,12 @@
 # Springshot
-
 Add a little WebOS to iOS!
 
 ### How do I Springshot?
-You can find Springshot in Cydia under the BigBoss repo :D
+You can find Springshot in Cydia under the BigBoss repo. :D
 
-Open app switching on iOS 7, pull an app downwards, let go... weeeeeeee!!
+Open the app switching on iOS 7, pull an app downwards, let go... weeeeeeee!!
+
+Just like a slingshot, and just like how WebOS used to be on the HP Touchpad.
 
 ![weeeee.gif](https://raw2.github.com/b3ll/Springshot/master/README/weeeeeeee.gif?token=1981722__eyJzY29wZSI6IlJhd0Jsb2I6YjNsbC9TcHJpbmdzaG90L21hc3Rlci9SRUFETUUvd2VlZWVlZWVlLmdpZiIsImV4cGlyZXMiOjEzOTMzNTkyNjV9--fb76134330b034b4a74e7f834383d1e88f73f938)
 
