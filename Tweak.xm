@@ -1,3 +1,11 @@
+//
+//  Tweak.xm
+//  Springshot
+//
+//  Created by Adam Bell on 2013-12-31.
+//  Copyright (c) 2014 Adam Bell. All rights reserved.
+//
+
 %config(generator=MobileSubstrate);
 
 #import "springshot.h"
