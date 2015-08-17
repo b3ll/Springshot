@@ -8,7 +8,7 @@ Open the app switching on iOS 7, pull an app downwards, let go... weeeeeeee!!
 
 Just like a slingshot, and just like how WebOS used to be on the HP Touchpad.
 
-![weeeee.gif](https://raw2.github.com/b3ll/Springshot/master/README/weeeeeeee.gif)
+![weeeeeeee.gif](/README/weeeeeeee.gif?raw=true "weeeeeeee")
 
 ### How do I compile?
 Uses theos, so edit the Makefile and `make package install` ALL the things!
